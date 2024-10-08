@@ -14,6 +14,7 @@ arch=("x86_64")
 url="https://remotedesktop.google.com"
 license=("BSD")
 depends=("gtk3" "libutempter" "libxss" "nss" "python-packaging" "python-psutil" "python-pyxdg" "xf86-video-dummy" "xorg-xhost" "xorg-server-xvfb" "xorg-setxkbmap" "xorg-xauth" "xorg-xdpyinfo" "xorg-xrandr")
+conflicts=("${_pkgname}" "${_pkgname}-bin")
 install="${_pkgname}.install"
 source=(
   "${_pkgname}-${pkgver}.deb::https://dl.google.com/linux/${_pkgname}/deb/pool/main/${_pkgname:0:1}/${_pkgname}/${_pkgname}_${pkgver}_amd64.deb"
